@@ -35,7 +35,7 @@ pipeline {
             }
         }
         stage('Packaging') {
-            agent label{Jenkins-Slave}
+            agent { label 'Jenkins-Slave' }
             steps {
                 echo 'Packaging the Code'
                 sh 'mvn package'
