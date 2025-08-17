@@ -35,7 +35,7 @@ pipeline {
             }
         }
         stage('Packaging') {
-            agent label 'mymaven'
+            agent label{Jenkins-Slave}
             steps {
                 echo 'Packaging the Code'
                 sh 'mvn package'
